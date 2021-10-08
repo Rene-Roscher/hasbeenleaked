@@ -3,7 +3,6 @@ import './tailwind.css'
 import App from './App.vue'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
-import 'tippy.js/dist/tippy.css'
 
 const app = createApp(App)
 

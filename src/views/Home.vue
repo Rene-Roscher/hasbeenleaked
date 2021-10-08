@@ -37,7 +37,7 @@
               <div class="relative inline-block overflow-hidden">
                 <img class="inline-block object-cover w-24 h-24 rounded-full" :src="user.logo" alt="User's image"/>
                 <span class="absolute inset-16 inline-block w-4 h-4 rounded-full">
-                  <checklist-item v-tippy="isLeaked ? 'Leaked' : 'Safe'" :type="isLeaked ? 'danger' : 'success'"/>
+                  <checklist-item :type="isLeaked ? 'danger' : 'success'"/>
                 </span>
               </div>
               <div class="py-1.5 border-b border-gray-700 text-center">
@@ -60,7 +60,6 @@ import ButtonRepo from '@/components/ButtonRepo.vue'
 import ChecklistItem from '@/components/ChecklistItem.vue'
 import axios from 'axios';
 import _ from 'lodash';
-import { directive } from 'vue-tippy'
 
 const IDsUri = 'https://gist.githubusercontent.com/Rene-Roscher/a9febbf18d66102bbd2981562f729bc5/raw/b58366a073b918f82aa6159309e8b4ae619befd4/twitch-leaked-db';
 
@@ -68,9 +67,6 @@ export default {
   components: {
     ChecklistItem,
     ButtonRepo
-  },
-  directives: {
-    tippy: directive,
   },
   data() {
     return {
