@@ -9,7 +9,7 @@
         >
           Ready to see if you are one of those affected?
           <br/>
-          <span class="text-indigo-600">- 14,104.401 users are leaked</span>
+          <span class="text-indigo-600">- {{ leaked.length }} users are affected</span>
         </h2>
         <div class="flex mt-8 lg:flex-shrink-0 lg:mt-0">
           <ButtonRepo/>
