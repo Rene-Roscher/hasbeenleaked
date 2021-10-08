@@ -36,7 +36,7 @@
             <div class="flex-col space-y-3">
               <div class="relative inline-block overflow-hidden flex justify-center">
                 <img draggable="false" class="inline-block object-cover w-24 h-24 rounded-full" :src="user.logo" alt="User's image"/>
-                <span class="absolute inset-16 inline-block w-4 h-4 rounded-full">
+                <span class="absolute inset-y-16 inset-x-20 inline-block w-4 h-4 rounded-full">
                   <checklist-item :type="isLeaked ? 'danger' : 'success'"/>
                 </span>
               </div>
