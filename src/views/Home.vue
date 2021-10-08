@@ -9,7 +9,7 @@
         >
           Ready to see if you are one of those affected?
           <br/>
-          <span class="text-indigo-600">- {{ leaked.length }} users are affected</span>
+          <span class="text-indigo-600">- {{ affectedUsersCount }} users are affected</span>
         </h2>
         <div class="flex mt-8 lg:flex-shrink-0 lg:mt-0">
           <ButtonRepo/>
@@ -101,6 +101,11 @@ export default {
   mounted() {
     this.storeAffectedUsers();
     setInterval(this.storeAffectedUsers, 120*1000)
+  },
+  computed: {
+    affectedUsersCount() {
+      return this.leaked ? this.leaked.length : 0;
+    }
   },
   watch: {
     username: {
