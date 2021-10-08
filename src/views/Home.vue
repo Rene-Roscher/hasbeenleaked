@@ -35,7 +35,7 @@
           <div class="col-span-1 mx-auto flex justify-center p-4" v-if="isFound">
             <div class="flex-col space-y-3">
               <div class="relative inline-block overflow-hidden">
-                <img class="inline-block object-cover w-24 h-24 rounded-full" :src="user.logo" alt="User's image"/>
+                <img draggable="false" class="inline-block object-cover w-24 h-24 rounded-full" :src="user.logo" alt="User's image"/>
                 <span class="absolute inset-16 inline-block w-4 h-4 rounded-full">
                   <checklist-item :type="isLeaked ? 'danger' : 'success'"/>
                 </span>
